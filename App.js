@@ -33,9 +33,7 @@ export default function App() {
 
     return (
         <View style={styles.container}>
-
             <Text style={styles.sectionTitle}>My List</Text>
-
             <View style={styles.items}>
                 {
                     taskItems.map((item, index) => {
@@ -47,25 +45,18 @@ export default function App() {
                     })
                 }
             </View>
-
             <KeyboardAvoidingView
                 behavior='padding'
                 keyboardVerticalOffset={keyboardVerticalOffset}
                 style={styles.writeTaskWrapper}
             >
-
                 <TextInput style={styles.input} placeholder={'Write a Task'} value={task} onChangeText={(text) => setTask(text)} />
-
                 <TouchableOpacity onPress={() => handleAddTask()}>
-
                     <View style={styles.addWrapper}>
                         <Text style={styles.addText}>+</Text>
                     </View>
-
                 </TouchableOpacity>
-
-            </KeyboardAvoidingView>
-            
+            </KeyboardAvoidingView>            
             <StatusBar style="auto" />
         </View>
     );
